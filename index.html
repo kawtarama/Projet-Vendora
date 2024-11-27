@@ -3,9 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Vendora perfume</title>
 </head>
 <body>
+    <nav>
+        <div class="product">
+            <img src="logo.png" alt="Image">
+        </div>
+        <ul class="nav-links">
+            <li>Accueil</li>
+            <li>Contact</li>
+            <li>Produits</li>
+            
+        </ul>
+
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="form-container">
+        <h2>Formulaire de commande</h2>
+        <form action="#" method="post">
+            <!-- Nom et Prénom -->
+            <label for="nom">Nom et Prénom :</label>
+            <input type="text" id="nom" name="nom" placeholder="Entrez votre nom complet" required>
+            <!-- Adresse -->
+            <label for="adresse">Adresse :</label>
+            <input type="text" id="adresse" name="adresse" placeholder="Entrez votre adresse" required>
+
+            <!-- Code postal -->
+            <label for="code-postal">Code Postal :</label>
+            <input type="text" id="code-postal" name="code-postal" placeholder="Entrez le code postal" required>
+            <!-- <br><br> -->
+            <!-- Numéro de téléphone -->
+            <label for="telephone">Numéro de Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro" required>
+            <!-- Quantité -->
+            <label for="quantite">Quantité désirée :</label>
+            <input type="number" id="quantite" name="quantite" min="1" placeholder="0" required>
+            
+            <!-- Total de la commande -->
+            <label for="total">Total de la commande (DH) :</label>
+            <input type="number" id="total" name="total" readonly placeholder="Calculé automatiquement">
+            <!-- <br><br> -->
+            <!-- Bouton de soumission -->
+            <button type="submit">Finaliser la commande</button>
+</form>
     
 </body>
 </html>
