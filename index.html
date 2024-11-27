@@ -20,7 +20,7 @@
         </ul>
 
     </nav>
-    <br><br>
+    <br>
 
 
 
@@ -109,16 +109,24 @@
             <label for="telephone">Numéro de Téléphone :</label>
             <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro" required>
             <!-- Quantité -->
-            <label for="quantite">Quantité désirée :</label>
-            <input type="number" id="quantite" name="quantite" min="1" placeholder="0" required>
-            <input type="hidden" id="PrixUnitaire" value="300">
-            <!-- Total de la commande -->
             
-            <label for="total">Total de la commande (DH) :</label>
+           
+            <label for="quantite">Quantité désirée :</label>
+          <input type="number" id="quantite" name="quantite" min="1" placeholder="Entrez la quantité" required>
+
+            <!-- Prix unitaire -->
+            <input type="hidden" id="PrixUnitaire" value="300">
+                
+            <!-- Total calculé automatiquement -->
+             <label for="total">Total de la commande (DH) :</label>
+                        
+                        
             <input type="number" id="total" name="total" readonly placeholder="Calculé automatiquement">
-            <!-- <br><br> -->
-            <!-- Bouton de soumission -->
+
+             <!-- Bouton de soumission -->
+                         
             <button type="submit">Finaliser la commande</button>
+        
         </form>
         </div>
 
