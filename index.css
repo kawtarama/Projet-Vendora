@@ -145,3 +145,65 @@ button {
 button:hover {
     background-color: #ba3888;
 }
+
+
+
+.footer {
+    background-color: #f4d4e6;
+    color: #161313;
+    padding: 20px 10px;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .footer-container {
+  
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        
+    }
+
+    .footer-contact{
+        height: 100px;
+        text-align: justify;
+        width: 50%;
+        margin-left: 50px;
+        
+    }
+    .footer-contact h2{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-style: italic;
+        padding-bottom: 20px;
+       
+    }
+    
+    .footer-contact img {
+        width: 15px; /* Ajustez la taille des logos selon vos besoins */
+        margin-right: 5px;
+        vertical-align: middle; /* Alignement vertical au centre par rapport au texte */
+        padding-left: 10px;
+    }
+    
+    .footer-socials p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        display: flex;
+        text-align: justify;
+        
+       
+
+      }
+      .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+        font-size: 0.8rem;
+      color: #444141;
+      }
+      .footer-icons {
+        display: flex;
+        gap: 15px;
+        }
+        
