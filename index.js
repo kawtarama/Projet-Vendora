@@ -42,7 +42,6 @@
 
 
 
-// JavaScript to swap images
 const smallImages = document.querySelectorAll('.small_img'); // Collect all small images
 const productImg = document.getElementById('ProductImg');  // Main product image
 
@@ -53,3 +52,8 @@ smallImages.forEach(image => {
         productImg.src = this.src;
     });
 });
+
+
+
+
+
