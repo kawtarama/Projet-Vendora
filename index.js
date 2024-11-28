@@ -8,6 +8,7 @@ function calculerTotal() {
         let total = quantite * prixUnitaire; // Calcule le total
         document.getElementById("total").value = total.toFixed(2); // Affiche avec 2 décimales
     } else {
+        
         document.getElementById("total").value = 0; // Réinitialise le total si la quantité est invalide
     }
 }
