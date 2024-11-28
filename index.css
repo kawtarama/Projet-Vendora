@@ -94,4 +94,12 @@ div{
 .product-description h3{
     color:brown;
 }
-    
+.product-img {
+    text-align: center;
+}
+
+.small_img {
+    width: 70px;
+    height: auto;
+    cursor: pointer;
+}
