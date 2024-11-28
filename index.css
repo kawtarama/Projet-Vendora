@@ -63,6 +63,7 @@ div{
 
     width: 1300px;   
     height: auto; 
+    cursor: pointer;
 }
 .image2 {
     width: 20px;   
