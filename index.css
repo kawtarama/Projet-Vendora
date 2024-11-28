@@ -1,7 +1,7 @@
 
 
 
-<<<<<<< HEAD
+
 
 
 
@@ -78,7 +78,8 @@ div{
     align-items: center;
     gap: 100px;
     margin: 20px;
-=======
+}
+
 * {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -108,12 +109,10 @@ nav {
 /* Liste de navigation (alignée à droite) */
 .nav-links {
     list-style-type: none;
->>>>>>> b6a67f9054ca1c104a741c7fc9e8e1ed51809e47
     display: flex;
     
 }
 
-<<<<<<< HEAD
 .product-description{
     display: flex;
     justify-items: center;
@@ -136,7 +135,7 @@ nav {
     height: auto;
     cursor: pointer;
 }
-=======
+
 .nav-links li {
     margin-right: 20px; /* Espacement entre les éléments de la liste */
 }
@@ -280,5 +279,3 @@ nav {
         display: flex;
         gap: 15px;
         }
-        
->>>>>>> b6a67f9054ca1c104a741c7fc9e8e1ed51809e47
