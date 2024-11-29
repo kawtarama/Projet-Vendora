@@ -19,25 +19,6 @@ document.getElementById("quantite").addEventListener("input", calculerTotal);
 
 
 
-// // Fonction pour afficher le message de succès après la soumission du formulaire
-// function showSuccessMessage(event) {
-//     event.preventDefault(); // Empêche la soumission du formulaire pour afficher le message
-
-//     // Afficher le message de succès
-//     const successMessage = document.getElementById('successMessage');
-//     successMessage.style.display = 'block';
-
-//     // Optionnel : Réinitialiser le formulaire après une seconde
-//     setTimeout(() => {
-//         document.querySelector('form').reset(); // Réinitialise le formulaire
-//         successMessage.style.display = 'none'; // Masque le message après réinitialisation
-//     }, 3000); // Masque le message après 3 secondes
-// }
-
-// // Écouter l'événement submit du formulaire
-// document.querySelector('form').addEventListener('submit', showSuccessMessage);
-
-
 
 
 
