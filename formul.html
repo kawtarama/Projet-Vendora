@@ -5,83 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="formul.css">
-    <title>Document</title>
+    <title>Formulaire de commande</title>
 </head>
 <body>
-
-
     <div class="form-container">
         <h2>Formulaire de commande</h2>
-        <form action="#" method="post">
+        <form id="orderForm" action="#" method="post">
             <!-- Nom et Prénom -->
+            
             <label for="nom">Nom et Prénom :</label>
-            <input type="text" id="nom" name="nom" placeholder="Entrez votre nom complet" required>
+            <input type="text" id="nom" name="nom" placeholder="Entrez votre nom complet">
+
             <!-- Adresse -->
             <label for="adresse">Adresse :</label>
-            <input type="text" id="adresse" name="adresse" placeholder="Entrez votre adresse" required>
-    
+            <input type="text" id="adresse" name="adresse" placeholder="Entrez votre adresse">
+
             <!-- Code postal -->
             <label for="code-postal">Code Postal :</label>
-            <input 
-                    type="postal" 
-                    id="code-postal" 
-                    name="code-postal" 
-                    placeholder="Entrez votre numéro" 
-                    maxlength="10" 
-                    required>
-            <!-- <input type="text" id="code-postal" name="code-postal" placeholder="Entrez le code postal" required> -->
-            <!-- <br><br> -->
-           
-            
-            <!-- Champ de téléphone -->
-            <!-- <label for="telephone">Numéro de Téléphone :</label> -->
-            <!-- <input 
-                type="tel" 
-                id="telephone" 
-                name="telephone" 
-                placeholder="Entrez votre numéro" 
-                maxlength="10" 
-                pattern="[0-9]{10}" 
-                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);" 
-                required> -->
-                <label for="telephone">Numéro de Téléphone :</label>
-                <input 
-                    type="tel" 
-                    id="telephone" 
-                    name="telephone" 
-                    placeholder="Entrez votre numéro" 
-                    maxlength="10" 
-                    required>
-                
-                
+            <input type="text" id="code-postal" name="code-postal" placeholder="Entrez le code postal" maxlength="10">
 
-           
+            <!-- Numéro de Téléphone -->
+            <label for="telephone">Numéro de Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro" maxlength="10">
+
             <!-- Quantité -->
-            
-           
             <label for="quantite">Quantité désirée :</label>
-          <input type="number" id="quantite" name="quantite" min="1" placeholder="Entrez la quantité" required>
-    
-            <!-- Prix unitaire -->
+            <input type="number" id="quantite" name="quantite" min="1" placeholder="Entrez la quantité">
+
+            <!-- Prix unitaire (champ caché) -->
             <input type="hidden" id="PrixUnitaire" value="300">
-                
+
             <!-- Total calculé automatiquement -->
-             <label for="total">Total de la commande (DH) :</label>
-                   <output id="total" name="total">0</output>
-            <!-- <input type="number" id="total" name="total" readonly placeholder="Calculé automatiquement"> -->
-            <br><br>
-             <!-- Bouton de soumission -->
-                         
-            <button type="submit">Finaliser la commande</button>
-            <!-- <p id="successMessage" class="success-message">Commande validée avec succès !</p> -->
+            <label for="total">Total de la commande (DH) :</label>
+            <output id="total" name="total">0</output>
+            
+            <!-- Message d'erreur -->
+            <p id="errorMessage" class="error-message" style="display: none; color: red; font-weight: bold;">
+                Veuillez remplir tous les champs avant de finaliser la commande.
+            </p>
         
+            <!-- Bouton de soumission -->
+            <button type="submit">Finaliser la commande</button>
         </form>
-        <!-- Zone pour afficher les messages -->
-     <p id="successMessage" class="success-message" style="display: none;">Commande validée avec succès !</p>
-        </div>
+
+        <!-- Zone pour afficher le message de succès -->
+        <p id="successMessage" class="success-message" style="display: none; color: rgb(110, 178, 109); font-weight: bold;">
+            Commande validée avec succès !
+        </p>
     
+    </div>
 </body>
 <script src="index.js"></script>
 </html>
+
 
 

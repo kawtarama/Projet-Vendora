@@ -19,23 +19,70 @@ document.getElementById("quantite").addEventListener("input", calculerTotal);
 
 
 
-// Fonction pour afficher le message de succès après la soumission du formulaire
-function showSuccessMessage(event) {
-    event.preventDefault(); // Empêche la soumission du formulaire pour afficher le message
+// // Fonction pour afficher le message de succès après la soumission du formulaire
+// function showSuccessMessage(event) {
+//     event.preventDefault(); // Empêche la soumission du formulaire pour afficher le message
 
-    // Afficher le message de succès
-    const successMessage = document.getElementById('successMessage');
-    successMessage.style.display = 'block';
+//     // Afficher le message de succès
+//     const successMessage = document.getElementById('successMessage');
+//     successMessage.style.display = 'block';
 
-    // Optionnel : Réinitialiser le formulaire après une seconde
-    setTimeout(() => {
-        document.querySelector('form').reset(); // Réinitialise le formulaire
-        successMessage.style.display = 'none'; // Masque le message après réinitialisation
-    }, 3000); // Masque le message après 3 secondes
-}
+//     // Optionnel : Réinitialiser le formulaire après une seconde
+//     setTimeout(() => {
+//         document.querySelector('form').reset(); // Réinitialise le formulaire
+//         successMessage.style.display = 'none'; // Masque le message après réinitialisation
+//     }, 3000); // Masque le message après 3 secondes
+// }
 
-// Écouter l'événement submit du formulaire
-document.querySelector('form').addEventListener('submit', showSuccessMessage);
+// // Écouter l'événement submit du formulaire
+// document.querySelector('form').addEventListener('submit', showSuccessMessage);
+
+
+
+
+
+document.getElementById("orderForm").addEventListener("submit", function (event) {
+    // Empêche le rechargement ou la redirection de la page
+    event.preventDefault();
+
+    // Récupérer tous les champs du formulaire
+    const fields = [
+        document.getElementById("nom"),
+        document.getElementById("adresse"),
+        document.getElementById("code-postal"),
+        document.getElementById("telephone"),
+        document.getElementById("quantite")
+    ];
+
+    let allFieldsFilled = true;
+
+    // Vérifie si chaque champ est rempli
+    fields.forEach(field => {
+        if (field.value.trim() === "") {
+            allFieldsFilled = false;
+        }
+    });
+
+    // Récupérer les messages
+    const errorMessage = document.getElementById("errorMessage");
+    const successMessage = document.getElementById("successMessage");
+
+    if (!allFieldsFilled) {
+        // Si des champs sont vides
+        errorMessage.style.display = "block"; // Afficher le message d'erreur
+        successMessage.style.display = "none"; // Cacher le message de succès
+    } else {
+        // Si tous les champs sont remplis
+        errorMessage.style.display = "none"; // Cacher le message d'erreur
+        successMessage.style.display = "block"; // Afficher le message de succès
+    }
+});
+
+
+
+
+
+
 
 
 

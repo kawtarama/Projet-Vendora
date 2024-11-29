@@ -5,6 +5,8 @@
     justify-items: center;
    flex-direction:column;
      color: rgb(197, 65, 188);
+     font-size: 50px;
+     margin-left: 200px;
       
         
 
@@ -118,16 +120,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 .product-container{
     display: inline-flex;
     justify-content: center;
@@ -135,10 +127,6 @@
     gap: 100px;
     margin: 20px;
 }
-
-
-
-
 
 
 
@@ -184,7 +172,7 @@
   display: flex;
   align-items: center;
   padding: 20px;
- 
+ margin-left: 200px;
 }
 
 /* Style pour la description du produit */
@@ -376,22 +364,6 @@ nav {
   }
 }
 
-  
-  
-  
-        
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -445,4 +417,13 @@ nav {
       .footer-icons {
         display: flex;
         gap: 15px;
+        }
+
+
+
+        .body-product-container{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
         }

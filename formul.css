@@ -17,7 +17,7 @@ body{
     padding: 20px 30px;
     box-shadow: 0 4px 10px rgba(205, 195, 195, 0.1);
     width: 100%;
-    
+   
    max-width: 400px;
 }
 
@@ -41,15 +41,20 @@ label {
 
 input {
     margin-bottom: 15px;
-    padding: 10px;
+    padding: 5px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
+    margin-right: 200px;
+
+    
+   
 }
 input:focus {
     border-color: #d8c1c1;
     outline: none;
+    
 }
 
 button {
@@ -70,18 +75,14 @@ button:hover {
 
 
 input:invalid {
-    border: 2px solid rgb(118, 68, 102);
+    border: 2px solid rgb(68, 118, 97);
+    
 }
 
 input:valid {
-    border: 2px solid green;
+    border: 2px solid rgb(30, 34, 30);
 }
    
 
 
 
-.success-message {
-    color: green;
-    font-weight: bold;
-    margin-top: 20px;
-}
