@@ -1,3 +1,11 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 .form-container {
    
     background-color: #e8dce2;
@@ -13,7 +21,7 @@
 h2 {
     text-align: center;
     margin-bottom: 10px;
-    color: #a11964;
+    color: #a04d7b;
 }
 
  form {
@@ -37,7 +45,7 @@ input {
     width: 100%;
 }
 input:focus {
-    border-color: #ff00aa;
+    border-color: #d8c1c1;
     outline: none;
 }
 
@@ -51,5 +59,26 @@ button {
     font-size: 16px;
 }
 button:hover {
-    background-color: #ba3888;
+    background-color: #d8c1c1;
+}
+
+
+
+
+
+input:invalid {
+    border: 2px solid rgb(118, 68, 102);
+}
+
+input:valid {
+    border: 2px solid green;
+}
+   
+
+
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
 }

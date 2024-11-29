@@ -1,76 +1,132 @@
 
 
+.product-description{
+   display: flex;
+    justify-items: center;
+   flex-direction:column;
+     color: rgb(197, 65, 188);
+      
+        
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-body{
-    background-color: whitesmoke;
-}
-div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.product-img{
-    display: flex;
-    flex-direction: column;
 }
 
-.image img {
 
-    width: 1300px;   
-    height: auto; 
-    cursor: pointer;
+
+
+
+/* Conteneur principal */
+.product-container {
+  display: flex; /* Place les images et la description côte à côte */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1200px;
 }
-.image2 {
-    width: 20px;   
-    height: auto; 
-    margin: 150px;
+
+/* Conteneur des images */
+.product-imgolympea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
+
+/* Image principale */
+#ProductImg {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Galerie d'images miniatures */
+.Olympea {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.small_img {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.small_img:hover {
+  transform: scale(1.1); /* Agrandissement au survol */
+  border: 2px solid #333; /* Bordure visible */
+}
+
+/* Conteneur de description */
+.product-description {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+
+.product-description h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-description p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.product-description h3 {
+  font-size: 22px;
+  color: #e63946; /* Couleur pour le prix */
+  margin: 10px 0;
+}
+
+.product-description p del {
+  font-size: 16px;
+  color: #aaa; /* Prix barré en gris */
+}
+
+.butu {
+  background-color: #e63946; /* Rouge vif */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.butu:hover {
+  background-color: #1e1b1c; /* Rouge foncé au survol */
+}
+
+.butu a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .product-container{
     display: inline-flex;
@@ -80,10 +136,108 @@ div{
     margin: 20px;
 }
 
+
+
+
+
+
+
+
+/* Section principale */
+.product-animation {
+  display: flex;
+  justify-content: space-between; /* Met l'image à droite et le texte à gauche */
+  align-items: center; /* Centre verticalement les éléments */
+  /* padding: 20px; */
+  background-color: #d8c1c1;
+  border-radius: 10px;
+  /* transition: all 0.5s ease; */
+}
+
+/* Container pour le texte */
+.content-wrapper {
+  text-align: center; /* Centrer le texte */
+  animation: fadeIn 2s ease-in-out; /* Animation d'apparition */
+  justify-content: center;
+  
+  
+}
+
+/* Animation fade-in pour les éléments texte */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(20px); /* Commence plus bas */
+  }
+  100% {
+      opacity: 2;
+      transform: translateY(0); /* Fin de l'animation avec un léger mouvement vers le haut */
+  }
+}
+
+/* Style pour le titre */
+.welcome {
+  font-size: 50px;
+  font-weight: bold;
+  color: #060404;
+  justify-content: right;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+ 
+}
+
+/* Style pour la description du produit */
+.product-name {
+  font-size: 20px;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Conteneur de l'image */
+.product-details {
+  flex-shrink: 70; /* Empêche l'image de se redimensionner */
+}
+
+/* Style de l'image */
+.product-image {
+  width: 300px;
+  height: auto;
+  border-radius: 100px;
+  transition: transform 0.3s ease; /* Ajout d'une animation au survol */
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+}
+
+/* Effet au survol de l'image */
+.product-image:hover {
+  transform: scale(1.05); /* Agrandissement léger au survol */
+}
+
+/* Responsivité (au cas où l'écran est plus petit, les éléments se réorganisent) */
+@media (max-width: 768px) {
+  .product-description {
+      flex-direction: column; /* Aligne les éléments en colonne sur petits écrans */
+      text-align: center;
+  }
+  .product-image {
+      margin-top: 20px; /* Marge en haut de l'image */
+  }
+}
+
+
+
+
+
+
+
+
 * {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 200;
+    margin: 5;
+    padding: 50;
     /* overflow: hidden; */
    
 }
@@ -95,7 +249,7 @@ nav {
     justify-content: space-between; 
     align-items: center; /* Centrer verticalement */
     padding: 15px 1px;
-    background-color: #e7d3df;
+    background-color: #d8c1c1;
     height: 70px;
 }
 
@@ -113,22 +267,10 @@ nav {
     
 }
 
-.product-description{
-    display: flex;
-    justify-items: center;
-    flex-direction:column;
-    color: rgb(139, 0, 130);
-}
 
-.product-description h2{
-    color: #000;
-}
-.product-description h3{
-    color:brown;
-}
-.product-img {
-    text-align: center;
-}
+
+
+
 
 .small_img {
     width: 70px;
@@ -142,151 +284,116 @@ nav {
 
 
 
-.footer {
-    background-color: #f4d4e6;
-    color: #161313;
-    padding: 20px 10px;
-    font-family: 'Arial', sans-serif;
-  }
 
-  .footer-container {
+
+
+
+/* Styles de base pour le footer */
+.footer {
+  background-color: #d8c1c1; /* Couleur de fond sombre */
+  color: #161515; /* Texte en blanc */
+  padding: 0px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Conteneur principal */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
   
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        max-width: 1200px;
-        margin: 0 auto;
-        
-    }
-
-    .footer-contact{
-        height: 100px;
-        text-align: justify;
-        width: 50%;
-        margin-left: 400px;
-        
-    }
-    .footer-contact h2{
-        font-family:Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        font-style: italic;
-        padding-bottom: 20px;
-        
-    }
-    
-    .footer-contact img {
-        width: 15px; /* Ajustez la taille des logos selon vos besoins */
-        margin-right: 5px;
-        vertical-align: middle; /* Alignement vertical au centre par rapport au texte */
-        padding-left: 10px;
-    }
-    
-    .footer-socials p {
-        font-size: 0.9rem;
-        margin-bottom: 10px;
-        display: flex;
-        text-align: justify;
-        
-        
-       
-
-      }
-      .footer-bottom {
-      text-align: center;
-      margin-top: 20px;
-        font-size: 0.8rem;
-      color: #5a4242;
-      }
-      .footer-icons {
-        display: flex;
-        gap: 15px;
-        }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer {
-    background-color: #f4d4e6;
-    color: #161313;
-    padding: 20px 10px;
-    font-family: 'Arial', sans-serif;
+}
+
+/* Section Contact */
+.footer-contact h4,
+.footer-socials h4,
+.footer-info h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #8c507e; /* Orange vif pour les titres */
+}
+
+/* Icônes */
+.footer-contact .icon,
+.footer-socials .icon {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* Section Réseaux sociaux */
+.footer-socials {
+  flex: 1;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-icons a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 12px;
+  background-color: #908686;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  background-color: #ab7166; /* Couleur orange au survol */
+}
+
+/* Section À propos */
+.footer-info {
+  flex: 1;
+
+  max-width: 300px;
+}
+
+/* Bas de page */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
   }
+
+  .footer-icons {
+    justify-content: center;
+  }
+}
+
+  
+  
+  
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   .footer-container {
   

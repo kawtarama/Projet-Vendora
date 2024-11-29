@@ -22,11 +22,40 @@
     
             <!-- Code postal -->
             <label for="code-postal">Code Postal :</label>
-            <input type="text" id="code-postal" name="code-postal" placeholder="Entrez le code postal" required>
+            <input 
+                    type="postal" 
+                    id="code-postal" 
+                    name="code-postal" 
+                    placeholder="Entrez votre numéro" 
+                    maxlength="10" 
+                    required>
+            <!-- <input type="text" id="code-postal" name="code-postal" placeholder="Entrez le code postal" required> -->
             <!-- <br><br> -->
-            <!-- Numéro de téléphone -->
-            <label for="telephone">Numéro de Téléphone :</label>
-            <input type="tel" id="telephone" name="telephone" placeholder="Entrez votre numéro" required>
+           
+            
+            <!-- Champ de téléphone -->
+            <!-- <label for="telephone">Numéro de Téléphone :</label> -->
+            <!-- <input 
+                type="tel" 
+                id="telephone" 
+                name="telephone" 
+                placeholder="Entrez votre numéro" 
+                maxlength="10" 
+                pattern="[0-9]{10}" 
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);" 
+                required> -->
+                <label for="telephone">Numéro de Téléphone :</label>
+                <input 
+                    type="tel" 
+                    id="telephone" 
+                    name="telephone" 
+                    placeholder="Entrez votre numéro" 
+                    maxlength="10" 
+                    required>
+                
+                
+
+           
             <!-- Quantité -->
             
            
@@ -44,8 +73,11 @@
              <!-- Bouton de soumission -->
                          
             <button type="submit">Finaliser la commande</button>
+            <!-- <p id="successMessage" class="success-message">Commande validée avec succès !</p> -->
         
         </form>
+        <!-- Zone pour afficher les messages -->
+     <p id="successMessage" class="success-message" style="display: none;">Commande validée avec succès !</p>
         </div>
     
 </body>
